@@ -3,7 +3,7 @@ ENTRY( _start )
 
 MEMORY
 {
-	ram (wxa) : ORIGIN = 0x00000000, LENGTH = 32K
+	ram (wxa) : ORIGIN = 0x00000000, LENGTH = 64K
 }
 
 SECTIONS

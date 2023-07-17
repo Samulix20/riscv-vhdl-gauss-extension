@@ -1,4 +1,11 @@
+# Ignore IDE config folder
+.vscode
+
+# Ignore output files
 build
 work
 waves
 *.dump
+
+# Ignore VHDL rams
+vhdl_src/src/ram/B_RAM*
