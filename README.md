@@ -1,10 +1,12 @@
-# BNN Extension
+# riscv-vhdl-gauss-extension
 
-This branch contains an extended version of the RISC-V CPU. This version implements a custom extension that allows generating random gaussian values with a single ASM instruction. This extension was designed to accelerate the inference process of Bayesian Neural Networks in small CPUs.
+This project contains an extended version of the RISC-V CPU that can be found at [riscv-vhdl](https://github.com/Samulix20/riscv-vhdl). Please checkout the README of said project before continuing. 
+
+This version implements a custom extension that allows generating random gaussian values with a single ASM instruction. This extension was designed to accelerate the inference process of Bayesian Neural Networks in small CPUs.
 
 ## Gaussian number generator
 
-The gaussian number generator unit is formed by 12 31 bit Linear-feedback shift registers and a tree of adders which is pipelined to minimize the required cycle time.
+The gaussian number generator unit is formed by 12 31 bit Linear-feedback shift registers (LSFR) and a tree of adders which is pipelined to minimize the required cycle time.
 
 The sum of the 12 registers can be considered as a sum of 12 independent uniform distributions which, as a consequence of the central limit theorem, tends to a normal distribution.
 
