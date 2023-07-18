@@ -69,6 +69,19 @@ begin
 		we_in => '0'
 	);
 
+	-- IO register
+	io_peripheral_register : IO_REG
+	GENERIC MAP (addr => x"00080000")
+	PORT MAP (
+		reset => reset,
+		clk => clk,
+		data_in => write_bus,
+		addr_data => addr_bus,
+		we => we_bus,
+		mode => mode_bus,
+		data_out => read_bus
+	);
+
 	-- Print register
 	print_peripheral_register : VHDL_PRINT
 	GENERIC MAP (addr => x"00090000")

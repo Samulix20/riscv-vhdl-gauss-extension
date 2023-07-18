@@ -105,7 +105,7 @@ begin
 	);
 
 	mtimer : MTIMER_RISCV
-	GENERIC MAP (addr_mtime => x"00500000", addr_mtimecmp => x"00500008")
+	GENERIC MAP (addr_mtime => x"00050000", addr_mtimecmp => x"00050008")
 	PORT MAP (
 		reset => reset,
 		clk => clk,

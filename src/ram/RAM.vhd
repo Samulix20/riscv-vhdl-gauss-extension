@@ -59,7 +59,7 @@ begin
 	end process;
 
 	-- 128 KB addr space
-	bg_in <= '1' when unsigned(addr_data) < x"00100000" else '0';
+	bg_in <= '1' when unsigned(addr_data) < x"00020000" else '0';
 
 	we_0 <= '1' when we = '1' and (	(mode(1 downto 0) = "00" and addr_data(1 downto 0) = "00") or
 									(mode(1 downto 0) = "01" and addr_data(1 downto 0) = "00") or
