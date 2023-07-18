@@ -4,7 +4,7 @@ This branch contains an extended version of the RISC-V CPU. This version impleme
 
 ## Gaussian number generator
 
-The gaussian number generator unit is formed by 12 31 bit Linear-feedback shift registers and a tree of adders which is pipelined to minimise the required cycle time.
+The gaussian number generator unit is formed by 12 31 bit Linear-feedback shift registers and a tree of adders which is pipelined to minimize the required cycle time.
 
 The sum of the 12 registers can be considered as a sum of 12 independent uniform distributions which, as a consequence of the central limit theorem, tends to a normal distribution.
 
@@ -36,7 +36,7 @@ Both instructions use the R-Type encoding.
 
 ## Compiler modifications
 
-In order to use this new instructions the compiler must be updated. The directory `compiler` contains two modified files of the RISC-V GNU Compiler Toolchain source which add support the new instructions.
+In order to use these new instructions the compiler must be updated. The directory `compiler` contains two modified files of the RISC-V GNU Compiler Toolchain source which add support the new instructions.
 
 The `riscv-opc.h` must be updated at `binutils/include/opcode/`.
 
